@@ -1,6 +1,9 @@
-FROM ubuntu:16.04
+ARG BASE_IMAGE=ubuntu:22.04
+FROM ${BASE_IMAGE}
 
-MAINTAINER Billy Ray Teves <billyteves@gmail.com>
+LABEL org.opencontainers.image.authors="Paper-Dragon <2678885646@qq.com> Billy Ray Teves <billyteves@gmail.com>"
+
+ENV TZ=Asia/Shanghai
 
 # Let's start with some basic stuff.
 RUN apt-get update -qq && apt-get install -qqy \
